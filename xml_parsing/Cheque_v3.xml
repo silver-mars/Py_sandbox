@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:Documents Version="1.0" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:ns="http://fsrar.ru/WEGAIS/WB_DOC_SINGLE_01"
+   xmlns:ck="http://fsrar.ru/WEGAIS/ChequeV3"
+	xmlns:oref="http://fsrar.ru/WEGAIS/ClientRef_v2" 
+	xmlns:pref="http://fsrar.ru/WEGAIS/ProductRef_v2">
+<ns:Owner>
+  <ns:FSRAR_ID>This is fsrar id</ns:FSRAR_ID>
+</ns:Owner>
+<ns:Document>
+  <ns:ChequeV3>
+    <ck:Identity>1</ck:Identity>
+    <ck:Header>
+      <ck:Date>2022-05-30T09:43:11</ck:Date>
+      <ck:Kassa>1</ck:Kassa>
+      <ck:Shift>1</ck:Shift>
+      <ck:Number>1</ck:Number>
+      <ck:Type>this is type</ck:Type>
+    </ck:Header>
+    <ck:Content>
+    <ck:Bottle>
+        <ck:Barcode>This is a barcode</ck:Barcode>
+        <ck:EAN>This is EAN</ck:EAN>
+        <ck:Price>This is price</ck:Price>
+    </ck:Bottle>
+    </ck:Content>
+  </ns:ChequeV3>
+</ns:Document>
+</ns:Documents>
