@@ -1,5 +1,8 @@
+#from time import perf_counter
+#st = perf_counter()
+
 rows, cols = [int(x) for x in input().split()]
-matrix = [[str(0).ljust(3) for x in range(cols)] for _ in range(rows)]
+matrix = [[0 for x in range(cols)] for _ in range(rows)]
 total = rows * cols
 count = 0
 con_up_x = 0
@@ -42,3 +45,5 @@ while count != total:
 for i in range(rows):
     matrix[i][cols-1] = matrix[i][cols-1].rstrip()
     print(*matrix[i])
+
+#print(perf_counter() - st)   # return float
