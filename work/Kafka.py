@@ -17,6 +17,7 @@ class Kafkin:
             bootstrap_servers=srv,
             auto_offset_reset='earliest',
             enable_auto_commit=True,
+            consumer_timeout_ms=1000,
             value_deserializer=lambda m: json.loads(m.decode())
         )
         self.topic1 = topic1
@@ -79,12 +80,12 @@ class Kafkin:
             print(type(message))
 
 def main():
-    topic1 = "test_topic1"
-    topic2 = "test_topic2"
+    topic1 = "test_topic2"
+    topic_read = "test_topic1"
     grp1 = str(uuid.uuid1())
     grp2 = str(uuid.uuid1())
     srv = ["something-ci.ru:9092"]
-    consumer = Kafkin(srv, grp1, topic1, grp2, topic2)
+    consumer = Kafkin(srv, grp1, topic1, grp2, topic_read)
     #consumer.get_one()
     #topic1 = "test_topic2"
     #consumer.get_all()
