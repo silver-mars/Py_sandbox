@@ -18,8 +18,10 @@ for element in raw:
         result[tmp_key] = result.get(tmp_key, []) + [int(element)]
     else:
         result[tmp_key] = [int(element)]
+
 f = lambda num: len(num[1])
 length = 0
+
 for values in result.values():
     if len(values) > length:
         length = len(values)
